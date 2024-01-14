@@ -1,0 +1,736 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.loader_bg{
+    position: fixed;
+    z-index: 999999;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+.loader{
+    border: 0 soild transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+}
+.loader:before, .loader:after{
+    content: '';
+    border: 1em solid #ff5733;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+.loader:before{
+    animation-delay: .5s;
+}
+@keyframes loader{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+/*#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+   /* display: none;
+}
+
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+body {
+    display: none; /* Hide the scrollbar until preloader is visible 
+} 
+*/
+.home {
+    background-image: url("portfolio.gif");
+    height: 54vh;
+    margin: 0 auto;
+}
+
+.container-wrapper {
+    display: flex;
+    align-items: center;
+    padding-top: 1px;
+}
+
+.container {
+    width: fit-content;
+    height: fit-content;
+    margin-top: 2%;
+    margin-left: 1%;
+    margin-right: 10px;
+}
+
+span {
+    color: #f110cc;
+}
+
+.rotate-emoji {
+    display: inline-block;
+    animation: rotateEmoji 1s linear infinite;
+    transform-origin: 60% 80%;
+}
+
+@keyframes rotateEmoji {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(40deg);
+    }
+}
+
+h2 {
+    margin-left: 5%;
+    width: fit-content;
+}
+
+h1 {
+    color: green;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+}
+@media only screen and (max-width: 768px) {
+    .container-wrapper {
+        flex-direction: column; /* Stack containers vertically on smaller screens */
+        align-items: center;
+    }
+
+    .profile-container {
+        margin-top: 0; /* Remove top margin for better alignment */
+    }
+
+    .profile-pic {
+        width: 150px; /* Adjust the width for smaller screens */
+        height: 150px; /* Adjust the height for smaller screens */
+    }
+}
+.about {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.skills {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.skills-ad {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: 0 auto;
+    column-gap: 5vh;
+    row-gap: 10vh;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.project5,
+.project5 h2 {
+    font-size: x-large;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+    background-color: #be1313;
+    border-radius: 15px;
+    /* border-radius: 5pc;*/
+}
+
+.project1,
+.project2 {
+    max-width: 400px; /* Set a maximum width for the boxes */
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color:cadetblue;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project1:hover,
+.project2:hover
+{
+    transform: scale(1.05);
+}
+
+.project1 h2,
+.project2 h2 {
+    font-style: italic;
+    font-size: medium;
+    margin-top: 10px;
+    color: rgb(255, 30, 169);
+    font-weight: bold;
+}
+
+
+
+.project h1 {
+    font-size: larger;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .project1,
+    .project2 {
+        max-width: 100%;
+    }
+}
+
+.auto-type {
+    color: chocolate;
+}
+
+.text-style {
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #be1313;
+}
+
+.skills-ad img {
+    display: inline-block;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+    width: 80px;
+    height: 80px;
+}
+
+.skills-ad img:hover {
+    transform: scale(1.3);
+}
+
+.certificate {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 30px;
+    margin-left: 30px;
+    border-radius: 8px;
+    /*justify-content: center;*/
+    justify-content: space-evenly;
+    border: 2px solid #6c757d;
+    padding-inline-end: 20px;
+    background-color: #6c757d;
+    border-radius: 15px;
+    /*border-radius: 5pc;*/
+    /*margin: 0 auto;*/
+
+    
+   /* height: 400px;
+    padding-inline-end: 20px;*/
+}
+
+.certificate div {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.cert-c {
+    width: 200px;
+    height: 200px;
+    transition: transform .2s;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.cert-c:hover {
+    transform: scale(1.2);
+}
+
+.cert2 {
+    width: 200px;
+    height: 200px;
+    transition: transform .2s;
+    padding: 30px;
+}
+
+.cert2:hover {
+    transform: scale(1.2);
+}
+
+.cert3 {
+    width: 200px;
+    height: 200px;
+    transition: transform .2s;
+    padding: 30px;
+}
+
+.cert3:hover {
+    transform: scale(2.8);
+}
+
+.cert4 {
+    width: 200px;
+    height: 200px;
+    transition: transform .2s;
+    padding: 30px;
+}
+
+.cert4:hover {
+    transform: scale(1.2);
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+/* Your existing styles go here */
+
+@media only screen and (max-width: 768px) {
+.navbar-toggler {
+    display: block;
+}
+
+.navbar-collapse {
+    display: none;
+}
+
+.navbar-toggler-icon {
+    background-color: #6c757d; /* Change this to your desired gray color */
+        border-color: #6c757d;
+}
+
+.navbar-toggler.collapsed + .navbar-collapse {
+    display: none;
+}
+
+.navbar-toggler:not(.collapsed) + .navbar-collapse {
+    display: block;
+}
+}
+@media only screen and (max-width: 768px) {
+.navbar-toggler {
+    order: -1;
+}
+
+.navbar-toggler-icon {
+    background-color: #6c757d;
+    
+}
+
+.navbar-collapse {
+    order: 0;
+}
+
+.navbar-brand {
+    margin-right: auto;
+}
+}
+
+footer {
+background-color: #343a40; /* Dark background color */
+color: #fff; /* Light text color */
+padding: 20px 0; /* Add padding for better spacing */
+display: flex;
+justify-content: space-between; /* Arrange items with space between them */
+align-items: center; /* Align items vertically in the center */
+}
+
+.footer-about,
+.footer-links {
+flex: 1; /* Distribute available space equally */
+}
+
+.footer-links {
+text-align: right; /* Align links to the right */
+}
+
+.footer-links ul {
+list-style: none;
+padding: 0;
+}
+
+.footer-links li {
+margin: 0 15px;
+display: inline; /* Display links horizontally */
+
+}
+
+.footer-links a {
+text-decoration: none;
+color: #fff; /* Light text color for links */
+font-weight: bold;
+transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+color: #f110cc; /* Change link color on hover */
+}
+.footer-about p{
+margin-left: 25px;
+}
+.footer-links ul h2{
+
+margin-bottom: 30px;
+font-style: italic;
+font-size: medium;
+
+}
+/* Add this style for the copyright notice */
+.footer-copyright {
+flex: 1; /* Distribute available space equally */
+display: flex;
+justify-content: center; /* Center horizontally */
+align-items: center; /* Center vertically */
+
+}
+
+
+.footer-copyright p {
+margin: 0;
+color: #fff; /* Light text color for copyright notice */
+font-size: 14px; /* Adjust the font size as needed */
+}
+
+/* Style for active navbar item */
+.navbar-nav .nav-link.active {
+color: #f110cc !important; /* Change the color to your desired color */
+}
+.education, .education h2{
+font-size:x-large;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight: bolder;
+display: flex;
+align-items: center;
+justify-content: center;
+/* text-decoration:underline;*/
+
+}
+.college1{
+width: 700px;
+height: 200px;
+border: 1px solid green;
+ margin-left: 20%;
+ margin-top: 20px;
+ margin-bottom: 20px;
+
+}
+.college1 h2{
+font-style: italic;
+font-size:medium;
+margin-top: 10px;
+color: dodgerblue;
+
+}
+.college1 p{
+font-size: large;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+margin-left: 30px;
+margin: 0 0 0 30px; /* 0 top, 20px right, 0 bottom, 0 left */
+font-weight: bold;
+}
+.college1 h3{
+font-style: italic;
+font-size: medium;
+color: dodgerblue;
+margin: 0 0 0 30px; /* 0 top, 0 right, 0 bottom, 20px left */
+
+}
+.college1 h1{
+font-size:larger;
+font-weight: bold;
+margin-left: 30px;
+}
+.college2{
+width: 700px;
+height: 200px;
+border: 1px solid green;
+ margin-left: 20%;
+ margin-top: 20px;
+ margin-bottom: 20px;
+
+}
+.college2 h2{
+font-style: italic;
+font-size:medium;
+margin-top: 10px;
+color: dodgerblue;
+font-weight: bold;
+}
+.college2 p{
+font-size: x-large;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+margin-left: 30px;
+margin: 0 0 0 30px; /* 0 top, 20px right, 0 bottom, 0 left */
+
+}
+.college2 h3{
+font-style: italic;
+font-size: medium;
+color: dodgerblue;
+margin: 0 0 0 30px; /* 0 top, 0 right, 0 bottom, 20px left */
+font-weight: bold;
+}
+.college2 h1{
+font-size:larger;
+font-weight: bold;
+margin-left: 30px;
+}
+@media only screen and (max-width: 768px) {
+.college {
+    width: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.college1 h2,
+.college1 p,
+.college1 h3,
+.college1 h1,
+.college2 {
+    margin-left: 0; /* Reset the left margin for smaller screens */
+}
+
+/* Additional responsive styles if needed */
+.college1 {
+    width: 90%; /* Adjust width for smaller screens */
+    margin-left: 5%; /* Adjust left margin for smaller screens */
+}
+
+.college2 {
+    width: 90%; /* Adjust width for smaller screens */
+    margin-left: 5%; /* Adjust left margin for smaller screens */
+}
+}
+@media only screen and (max-width: 768px) {
+.college1,
+.college2 {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.college1 h2,
+.college1 p,
+.college1 h3,
+.college1 h1,
+.college2 h2,
+.college2 p,
+.college2 h3,
+.college2 h1 {
+    margin-left: 15px;
+}
+
+.college1 h1,
+.college2 h1 {
+    text-align: center;
+}
+}
+
+
+
+.college {
+display: flex;
+justify-content: space-around;
+}
+
+.college1,
+.college2 {
+width: 45%;
+padding: 20px;
+border: 2px solid #3498db;
+border-radius: 10px;
+margin: 20px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease-in-out;
+}
+
+.college1:hover,
+.college2:hover {
+transform: scale(1.05);
+}
+
+.college1 h2,
+.college2 h2 {
+font-style: italic;
+font-size: medium;
+margin-top: 10px;
+color: dodgerblue;
+font-weight: bold;
+}
+
+.college1 p,
+.college2 p {
+font-size: large;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+margin: 0 0 0 30px; /* 0 top, 20px right, 0 bottom, 0 left */
+font-weight: bold;
+}
+
+.college1 h3,
+.college2 h3 {
+font-style: italic;
+font-size: medium;
+color: dodgerblue;
+margin: 0 0 0 30px; /* 0 top, 0 right, 0 bottom, 20px left */
+font-weight: bold;
+}
+
+.college1 h1,
+.college2 h1 {
+font-size: larger;
+font-weight: bold;
+margin-left: 30px;
+}
+/* Add these media queries for responsiveness */
+
+@media only screen and (max-width: 768px) {
+.college {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+}
+
+.college1,
+.college2 {
+    width: 100%; /* Take full width on smaller screens */
+    margin: 10px 0; /* Adjust margin for spacing */
+}
+}
+
+@media only screen and (max-width: 600px) {
+.college1 h1,
+.college2 h1 {
+    font-size: medium; /* Adjust font size for smaller screens */
+}
+
+.college1 p,
+.college2 p {
+    font-size: small; /* Adjust font size for smaller screens */
+}
+
+.college1 h2,
+.college2 h2,
+.college1 h3,
+.college2 h3 {
+    font-size: small; /* Adjust font size for smaller screens */
+}
+}
+
+/* Add these styles to change the navbar item color to white */
+.navbar-nav .nav-link {
+color: #fff !important; /* Set the text color to white */
+}
+
+/* Style for active navbar item */
+.navbar-nav .nav-link.active {
+color: #f110cc !important; /* Change the color for the active link if needed */
+}
+
+.navbar-nav .resume-link a {
+padding: 0.5rem;
+border-radius: 15px;
+background-color: #007bff;
+color: #fff;
+text-decoration: none;
+}
+
+.navbar-nav .resume-link a:hover {
+background-color: #0056b3;
+}
+/* after click, text color  will be same*/
+.navbar-nav .resume-link a,
+.navbar-nav .resume-link a:visited,
+.navbar-nav .resume-link a:hover,
+.navbar-nav .resume-link a:active {
+color: #fff !important;
+}
