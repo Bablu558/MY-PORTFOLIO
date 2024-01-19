@@ -6,6 +6,19 @@ body {
     margin: 0;
     padding: 0;
 }
+/*for Dark Mode*/
+#mode-icon{
+    color:white;
+}
+
+.fa-moon, .fa-sun {
+    font-size: 1.5rem;
+    
+  }
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
 .loader_bg{
     position: fixed;
     z-index: 999999;

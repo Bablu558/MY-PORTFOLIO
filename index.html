@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css" integrity="your-correct-integrity-hash" crossorigin="anonymous">
     
 </head>
 <body>
@@ -23,6 +24,17 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
+                        <li class="nav-item ">
+                        <!-- <li class="nav-item dropdown mode-dropdown">  for dropdown option-->
+                            
+                            <a class="nav-link" href="#" onclick="toggleMode()" title="Dark & light">
+                                <i class="fas fa-moon" id="mode-icon"></i> <!-- Change to moon or other appropriate icon for dark mode -->
+                            </a>
+                            <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#" onclick="setMode('light')">Light Mode</a>
+                                <a class="dropdown-item" href="#" onclick="setMode('dark')">Dark Mode</a>
+                            </div> -->
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#home" onclick="toggleSection('home')">Home</a>
                         </li>
@@ -266,6 +278,23 @@
             document.body.style.visibility = 'visible';
         }, 5000);
     });
+
+    //for Dark Mode
+    function toggleMode() {
+        const body = document.body;
+        const modeIcon = document.getElementById('mode-icon');
+        const currentMode = body.classList.contains('dark-mode') ? 'dark' : 'light';
+
+        if (currentMode === 'dark') {
+            body.classList.remove('dark-mode');
+            modeIcon.classList.remove('fa-sun');
+            modeIcon.classList.add('fa-moon');
+        } else {
+            body.classList.add('dark-mode');
+            modeIcon.classList.remove('fa-moon');
+            modeIcon.classList.add('fa-sun');
+        }
+    }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
