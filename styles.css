@@ -105,6 +105,17 @@ body {
     height: 54vh;
     margin: 0 auto;
 }
+.gear-wheel {
+    width: 180px;
+    height: 180px;
+    background-image: url('4.gif');
+    background-size: cover;
+    animation: rotate 2s linear infinite;
+    position: absolute; 
+    top: calc(50vh - 155px); 
+    right: 60px; /* Adjust the distance from the right side */
+     
+}
 
 .container-wrapper {
     display: flex;
