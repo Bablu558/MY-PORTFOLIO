@@ -222,7 +222,7 @@ h1 {
     max-width: 80%;
     margin: 0 auto;
     column-gap: 5vh;
-    row-gap: 10vh;
+    row-gap: 50vh;
 }
 
 * {
