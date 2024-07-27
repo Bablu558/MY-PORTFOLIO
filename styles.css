@@ -309,13 +309,22 @@ body {
     font-weight: bold;
     color: #be1313;
 }
-
+.skills-ad{
+    /* border: 2px solid black;  */
+    height: 55vh;
+    overflow: scroll;
+    border-radius: 10px;
+}
 .skills-ad img {
-    display: inline-block;
-    padding: 10px;
+    /* display: inline-block; */
+    /* flex-wrap: wrap; */
+    /* padding: 10px; */
     transition: transform 0.3s ease-in-out;
     width: 80px;
     height: 80px;
+    
+    border-radius: 18px;
+    margin-top: 10px;
 }
 
 .skills-ad img:hover {
@@ -735,10 +744,10 @@ margin-left: 30px;
     
     
 }
-.footer-start{
+/* .footer-start{
     height: 100%;
-    
-}
+     */
+/* } */
 }
 
 /* Add these styles to change the navbar item color to white */
@@ -864,7 +873,7 @@ color: #fff !important;
 }
 .Blogs2-form h1{
     color: black;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 .first1 {
     width: 100%;
