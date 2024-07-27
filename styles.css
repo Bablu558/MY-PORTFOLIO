@@ -323,25 +323,54 @@ body {
 }
 
 .certificate {
-    display: flex;
-    flex-wrap: wrap;
+   display: flex;
+    /*  flex-wrap: wrap;
     margin-right: 30px;
     margin-left: 30px;
-    border-radius: 8px;
-    /*justify-content: center;*/
-    justify-content: space-evenly;
+    border-radius: 8px; */
+    align-items: center;
+    justify-content: center;
+    ;
+    /* justify-content: space-evenly;
     border: 2px solid #6c757d;
     padding-inline-end: 20px;
     background-color: #6c757d;
-    border-radius: 15px;
+    border-radius: 15px; */
     /*border-radius: 5pc;*/
     /*margin: 0 auto;*/
 
     
    /* height: 400px;
-    padding-inline-end: 20px;*/
+    padding-inline-end: 20px;
+    padding-left: 100px;
+    max-width:70vw;
+    max-height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+    background-color:#3498db; */
+   /* border-radius: 35px;
+    /* border-radius: 5pc;*/
+    /* overflow-x: scroll; */
 }
+.certi{
+    width: 80%;
+    height: 60vh;
+    /* background-color: #f110cc; */
+    /* background-color: gray; */
+    border-radius: 15px;
+    
+    background-color:cadetblue;
+    /* box-sizing: border-box; */
+    box-shadow: 10px 20px 8px ;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
 
+}
 .certificate div {
     display: flex;
     justify-content: center;
@@ -399,7 +428,9 @@ body {
     justify-content: center;
     
 }
-
+.education h2{
+    margin-top: 40px;
+}
 
 /* Your existing styles go here */
 
@@ -442,71 +473,6 @@ body {
 .navbar-brand {
     margin-right: auto;
 }
-}
-
-footer {
-background-color: #343a40; /* Dark background color */
-color: #fff; /* Light text color */
-padding: 20px 0; /* Add padding for better spacing */
-display: flex;
-justify-content: space-between; /* Arrange items with space between them */
-align-items: center; /* Align items vertically in the center */
-}
-
-.footer-about,
-.footer-links {
-flex: 1; /* Distribute available space equally */
-}
-
-.footer-links {
-text-align: right; /* Align links to the right */
-}
-
-.footer-links ul {
-list-style: none;
-padding: 0;
-}
-
-.footer-links li {
-margin: 0 15px;
-display: inline; /* Display links horizontally */
-
-}
-
-.footer-links a {
-text-decoration: none;
-color: #fff; /* Light text color for links */
-font-weight: bold;
-transition: color 0.3s ease-in-out;
-}
-
-.footer-links a:hover {
-color: #f110cc; /* Change link color on hover */
-}
-.footer-about p{
-margin-left: 25px;
-}
-.footer-links ul h2{
-
-margin-bottom: 30px;
-font-style: italic;
-font-size: medium;
-
-}
-/* Add this style for the copyright notice */
-.footer-copyright {
-flex: 1; /* Distribute available space equally */
-display: flex;
-justify-content: center; /* Center horizontally */
-align-items: center; /* Center vertically */
-
-}
-
-
-.footer-copyright p {
-margin: 0;
-color: #fff; /* Light text color for copyright notice */
-font-size: 14px; /* Adjust the font size as needed */
 }
 
 /* Style for active navbar item */
@@ -641,6 +607,7 @@ margin-left: 30px;
 .college2 h1 {
     text-align: center;
 }
+
 }
 
 
@@ -729,6 +696,14 @@ margin-left: 30px;
 .college2 h3 {
     font-size: small; /* Adjust font size for smaller screens */
 }
+.form-color{
+    height: 75vh;
+    /* background-color: #0056b3; */
+}
+.contain-form{
+    background-color: white;
+  
+
 }
 
 /* Add these styles to change the navbar item color to white */
@@ -759,3 +734,188 @@ background-color: #0056b3;
 .navbar-nav .resume-link a:active {
 color: #fff !important;
 }
+/* form section  */
+
+.form-color{
+    /* background-color: aqua; */
+    max-height: 95vh;
+}
+.container-form {
+     width: 100%;
+     max-width: 1000px;
+     margin: 0 auto;
+     /* background-color: rgb(10, 125, 218); */
+     padding: 20px;
+     border-radius: 10px;
+    /* position: relative; */
+    
+    /* flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px; */ 
+    /* border: 2px solid red; */
+   /* /* margin-bottom: 40px;
+  
+    /* padding: 20px;
+    margin-top: 100px;
+    margin-left: 65px;
+    box-shadow: 2px green;
+    column-gap: 15px;
+     */
+}
+.contain-form{
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+   
+    height: 90vh;
+   
+    
+   
+    
+}
+.input-form{
+     display: block;
+    width: 100%;
+    max-width: 500px;
+    height: 50px;
+
+   /*margin-bottom: 700px;*/
+   border: 1px solid #ddd;
+    border-radius: 4px;
+      /* box-sizing: border-box; */
+   margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+   
+}
+.btn{
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    transition: color 0.4s ease;
+    max-width: 1000px;
+    margin: 10px auto;
+
+}
+    .btn:hover{
+        /* background-color: #4070F4; */
+        background-color: green;
+
+        color: white;
+    }
+
+
+
+ .Blogs2-form{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+   color: #ff5733;
+    
+    /* padding: 20px; */
+   text-decoration:underline blue;
+
+
+}
+.Blogs2-form h1{
+    color: black;
+    margin-top: 40px;
+}
+.first1 {
+    width: 100%;
+    /* margin-top: -200px; */
+    max-width: 1000px;
+    padding: 20px; 
+    border: 1px solid red;
+    border-radius: 8px;
+    background-color: rgb(190, 16, 16);
+    margin-top: -250px ;
+    
+}
+.first1 h1{
+   
+align-items: center;
+text-align: center;
+
+} 
+/*/* .first1 form{
+    width: 100%;
+    display:grid;
+    align-items: center;
+    justify-content: center;
+} */
+footer {
+    background-color: #343a40; /* Dark background color */
+    color: #fff; /* Light text color */
+    padding: 20px 0; /* Add padding for better spacing */
+    display: flex;
+    justify-content: space-between; /* Arrange items with space between them */
+    align-items: center; /* Align items vertically in the center */
+    }
+    
+    .footer-about,
+    .footer-links {
+    flex: 1; /* Distribute available space equally */
+    }
+    
+    .footer-links {
+    text-align: right; /* Align links to the right */
+    }
+    
+    .footer-links ul {
+    list-style: none;
+    padding: 0;
+    }
+    
+    .footer-links li {
+    margin: 0 15px;
+    display: inline; /* Display links horizontally */
+    
+    }
+    
+    .footer-links a {
+    text-decoration: none;
+    color: #fff; /* Light text color for links */
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    }
+    
+    .footer-links a:hover {
+    color: #f110cc; /* Change link color on hover */
+    }
+    .footer-about p{
+    margin-left: 25px;
+    }
+    .footer-links ul h2{
+    
+    margin-bottom: 30px;
+    font-style: italic;
+    font-size: medium;
+    
+    }
+    /* Add this style for the copyright notice */
+    .footer-copyright {
+    flex: 1; /* Distribute available space equally */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    
+    }
+    
+    
+    .footer-copyright p {
+    margin: 0;
+    color: #fff; /* Light text color for copyright notice */
+    font-size: 14px; /* Adjust the font size as needed */
+    }
+    
