@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        .terms-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background-color: #007bff;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="terms-container">
+        <p>Before purchasing the project code, you agree to the following terms and conditions:</p>
+        <ul>
+            <li>All sales are final. No refunds will be provided.</li>
+            <li>The project code will be delivered as a downloadable zip file.</li>
+            <li>Redistribution or resale of the code is strictly prohibited.</li>
+            <li>Payment security is ensured through secure payment gateways.</li>
+            <li>Ensure you have read and understood the project details before purchasing.</li>
+        </ul>
+        <form action="purchase.html" method="post">
+            <input type="checkbox" id="accept-terms" name="accept-terms" required>
+            <label for="accept-terms">I accept the terms and conditions</label><br>
+            <button type="submit" class="btn btn-primary">Accept</button>
+        </form>
+    </div>
+    <script src="terms.js"></script>
+</body>
+</html>

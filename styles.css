@@ -6,6 +6,14 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.nav-item2{
+    /* border: 2px solid white; */
+    background-color: grey;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    
+}
 /*for Dark Mode*/
 #mode-icon{
     color:white;
