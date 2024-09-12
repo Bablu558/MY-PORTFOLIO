@@ -78,7 +78,7 @@
                         </li>
                         <!--  "Check My Resume" link here -->
                         <li class="nav-item resume-link">
-                            <a class="nav-link" href="bablu_cv338.jpg" download="Bablu_CV_21.jpg" title="Download Resume"> My Resume</a>
+                            <a class="nav-link" href="bablu_cv338.jpg"  download="Bablu_CV_21.jpg" title="Download Resume"> My Resume</a>
                         </li>
                     </ul>
                 </div>
@@ -146,25 +146,31 @@
  
        <!-- Project Boxes -->
          <div class="project">
-           <div class="project1">
-              <h2>Project 1</h2>
+           <div class="project2">
+            <img src="password_gen.png" class="card-img-top" alt="top" style="height: 200px; object-fit: cover;">
              <h1>Password Generator</h1>
              <a href="https://bablu558.github.io/password/" class="btn btn-primary">Click To View</a>
            </div>
 <div class="project2">
-            <h2>Project 2</h2>
+    <img src="calculator_p.png" class="card-img-top" alt="top" style="height: 200px; object-fit: contain;">
             <h1>Calculator</h1>
             <a href="https://bablu558.github.io/cal/" class="btn btn-primary">Click To View</a>
  </div>
 <div class="project2">
-            <h2>Project 3</h2>
+    <img src="image-sea.png"class="card-img-top" alt="top">
             <h1>Image Search</h1>
             <a href="https://bablu558.github.io/image-search/" class="btn btn-primary">Click To View</a>
 </div>
+
 <div class="project2">
-            <h2>Project 4</h2>
-            <h1>Sign in & Sign Up </h1>
-            <a href="#" class="btn btn-primary">Click To View</a>
+    <img src="expense.png"class="card-img-top" alt="top" style=" object-fit: cover;">
+    <h1>Expense Tracker</h1>
+    <a href="#" class="btn btn-primary">Click To View</a>
+</div>
+<div class="project2">
+    <h2>Project 4</h2>
+    <h1>Sign in & Sign Up </h1>
+    <a href="#" class="btn btn-primary">Click To View</a>
 </div>
 <div class="btnn">
     <a href="" class="button-link"><button>See More</button></a>
@@ -177,39 +183,41 @@
 </div>
     <div class="text" id="certificate"><h1>Certificate</h1></div>
     <div class="certificate">
+        
         <div class="certi">
-        <div class="cert-c">
+        <div class="cert-c img_full_size">
             <img src="ccc.png" alt="">
         </div>
-            <div class="cert2">
+            <div class="cert2 img_full_size">
                   <img src="Certificate.jpg" alt="">
             </div>
-          <div class="cert3">
-            <img src="bablu cer.jpg" alt="">
-          </div> 
-         <div class="cert4">
+        
+         <div class="cert4 img_full_size">
             <img src="bablu cer.jpg" alt="">
         </div>
         
-        <div class="cert4">
+        <div class="cert4 img_full_size">
             <img src="c++ certificate.jpg" alt="">
         </div>
         
        
-        <div class="cert4">
+        <div class="cert4 img_full_size">
             <img src="python cer.jpg" alt="">
         </div>
         
-        <div class="cert4">
+        <div class="cert4 img_full_size">
             <img src="hackerRank-css.jpg" alt="">
         </div>
 
-        <div class="cert4">
+        <div class="cert4 img_full_size">
             <img src="problem_solving-haCk.jpg" alt="">
         </div>
+
+        <div class="cert4 img_full_size">
+            <img src="upfflairs_cer.png" alt="">
+        </div> 
         
     </div>
-        
     </div>
 
                       <!-- Education Section -->
@@ -280,6 +288,21 @@
         
     
     </footer>
+
+    <!-- Modal Structure -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Certificate Image" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+        </div>
+    </div>
+</div>
+
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         var typed = new Typed(".auto-type", {
@@ -339,7 +362,7 @@
 
             // Make the website content visible
             document.body.style.visibility = 'visible';
-        }, 5000);
+        }, 4000);
     });
 
     //for Dark Mode
@@ -358,6 +381,24 @@
             modeIcon.classList.add('fa-sun');
         }
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Select all certificate images
+        const certificateImages = document.querySelectorAll('.img_full_size img');
+        
+        // Add click event listener to each image
+        certificateImages.forEach(img => {
+            img.addEventListener('click', function () {
+                // Set the source of the modal image to the clicked image
+                const modalImage = document.getElementById('modalImage');
+                modalImage.src = this.src;
+                
+                // Show the modal
+                const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+                imageModal.show();
+            });
+        });
+    });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
